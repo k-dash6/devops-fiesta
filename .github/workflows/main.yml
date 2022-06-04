@@ -48,7 +48,7 @@ jobs:
           packages: |
             pytest
             pytest-mock
-            eel
+            Eel
 
       - name: Package Application
         uses: JackMcKew/pyinstaller-action-windows@main
