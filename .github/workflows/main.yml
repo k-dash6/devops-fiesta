@@ -35,3 +35,27 @@ jobs:
         uses: py-actions/flake8@v2
         with:
           max-line-length: "120"
+
+  build_exe:
+    name: Build Exe File
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v1
+      - uses: BSFishy/pip-action@v1
+        with:
+          packages: |
+            pytest
+            pytest-mock
+            eel
+
+      - name: Package Application
+        uses: JackMcKew/pyinstaller-action-windows@main
+        with:
+          path: .
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-app
+          path: dist/windows

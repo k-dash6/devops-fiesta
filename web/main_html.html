@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Shake maker</title>
+    <script src="eel.js" ></script>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="main_css.css">
+</head>
+<body>
+
+<div class="column1">
+    <h1> <a class="header">Выберите ингредиенты</a> </h1>
+    <h6 class="mini_header">(хотя бы 2 ингредиента)</h6>
+
+   <p>
+       <input type="checkbox" class="checkbox" id="Vodka" value="водка">
+       <label class="labelcheckbox" for="Vodka">Водка</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Cognac" value="коньяк">
+       <label class="labelcheckbox" for="Cognac">Коньяк</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Whiskey" value="виски">
+       <label class="labelcheckbox" for="Whiskey">Виски</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Rum" value="ром">
+       <label class="labelcheckbox" for="Rum">Ром</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Tequila" value="текила">
+       <label class="labelcheckbox" for="Tequila">Текила</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Gin" value="джин">
+       <label class="labelcheckbox" for="Gin">Джин</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Vermut" value="вермут">
+       <label class="labelcheckbox" for="Vermut">Вермут</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Kirsh" value="кирш">
+       <label class="labelcheckbox" for="Kirsh">Кирш</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Bitter" value="биттер">
+       <label class="labelcheckbox" for="Bitter">Биттер</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Wine" value="вино">
+       <label class="labelcheckbox" for="Wine">Вино</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Liquor" value="ликер">
+       <label class="labelcheckbox" for="Liquor">Ликёр</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Champagne" value="шампанское">
+       <label class="labelcheckbox" for="Champagne">Шампанское</label><Br>
+   </p>
+
+
+    <p>
+        <input type="checkbox" class="checkbox" id="Cream" value="сливки">
+       <label class="labelcheckbox" for="Cream">Сливки</label><Br>
+
+        <input type="checkbox" class="checkbox" id="Pineapple_juice" value="ананасовый">
+       <label class="labelcheckbox" for="Pineapple_juice">Ананасовый сок</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Orange_juice" value="апельсиновый">
+       <label class="labelcheckbox" for="Orange_juice">Апельсиновый сок</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Cranberry_juice" value="клюквенный">
+       <label class="labelcheckbox" for="Cranberry_juice">Клюквенный сок</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Grapefruit_juice" value="грейпфрутовый">
+       <label class="labelcheckbox" for="Grapefruit_juice">Грейпфрутовый сок</label><Br>
+
+        <input type="checkbox" class="checkbox" id="Lemon_juice" value="лимонный">
+       <label class="labelcheckbox" for="Lemon_juice">Лимонный сок</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Coca-Cola" value="кола">
+       <label class="labelcheckbox" for="Coca-Cola">Coca-Cola</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Sprite" value="спрайт">
+       <label class="labelcheckbox" for="Sprite">Спрайт</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Tonic" value="тоник">
+       <label class="labelcheckbox" for="Tonic">Тоник</label><Br>
+    </p>
+
+       <p>
+       <input type="checkbox" class="checkbox" id="Lime" value="лайм">
+       <label class="labelcheckbox" for="Lime">Лайм</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Mint" value="мята">
+       <label class="labelcheckbox" for="Mint">Мята</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Sugar" value="сахар">
+       <label class="labelcheckbox" for="Sugar">Сахар</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Syrup" value="сахарный">
+       <label class="labelcheckbox" for="Syrup">Сахарный сироп</label><Br>
+
+       <input type="checkbox" class="checkbox" id="Egg" value="белок">
+       <label class="labelcheckbox" for="Egg">Яичный белок</label><Br>
+       </p>
+
+    <div>
+        <p><button class="border-button" type="button" value="Submit" id="submit">Собрать коктейль</button></p>
+        <a>или</a>
+        <p><button class="border-button2" type="button" value="random" id="random">Случайный коктейль</button></p>
+    </div>
+
+</div>
+
+<div class="column2">
+    <p><h1><a class="header">Результат</a></h1></p>
+    <p><div id="output" class="output"></div> </p>
+
+</div>
+
+
+<script src="main_js.js"></script>
+
+</body>
+</html>
