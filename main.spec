@@ -8,7 +8,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('C:\\Users\\kdash\\shake_makers\\venv\\lib\\site-packages\\eel\\eel.js', 'eel'), ('web', 'web'), ('req.txt', '.')],
+    datas=[('web', 'web'), ('req.txt', '.')],
     hiddenimports=['bottle_websocket'],
     hookspath=[],
     runtime_hooks=[],
