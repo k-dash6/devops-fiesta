@@ -1,7 +1,5 @@
 import sys
 import os
-import time
-
 import eel
 import random
 
