@@ -11,7 +11,6 @@ a = Analysis(
     datas=[('C:\\ProgramData\\Anaconda3\\lib\\site-packages\\eel\\eel.js', 'eel'), ('web', 'web'), ('req.txt', '.')],
     hiddenimports=['bottle_websocket'],
     hookspath=[],
-    hooksconfig={},
     runtime_hooks=[],
     excludes=[],
     win_no_prefer_redirects=False,
