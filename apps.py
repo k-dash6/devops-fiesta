@@ -1,5 +1,20 @@
+import sys
+import os
+import time
+
 import eel
 import random
+
+
+def req_path():
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, 'req.txt')
 
 
 @eel.expose
@@ -50,7 +65,8 @@ class Cocktails:
             return s
 
     def read(self):
-        with open("req.txt", 'r', encoding='utf-8') as file:
+        file_path = req_path()
+        with open(file_path, 'r', encoding='utf-8') as file:
             while True:
                 line = file.readline()
                 if not line:
