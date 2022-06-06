@@ -71,3 +71,13 @@ jobs:
             to: ${{ secrets.TELEGRAM_TO }}
             token: ${{ secrets.TELEGRAM_TOKEN }}
             message: Successful build
+
+      - name: Fail
+        if: ${{ failure() }}
+        uses: appleboy/telegram-action@master
+        with:
+            to: ${{ secrets.TELEGRAM_TO }}
+            token: ${{ secrets.TELEGRAM_TOKEN }}
+            message: Failed build
+
+
