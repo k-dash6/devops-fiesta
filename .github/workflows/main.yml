@@ -59,3 +59,15 @@ jobs:
         with:
           name: my-app
           path: ./dist/windows
+
+  build_telegram_notify:
+    needs: [notify, flake8-lint, build_exe]
+    if: ${{ (needs.notify.result == 'success' || needs.flake8-lint.result == 'success' || needs.build_exe.result == 'success') && always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Success
+        uses: appleboy/telegram-action@master
+        with:
+            to: ${{ secrets.TELEGRAM_TO }}
+            token: ${{ secrets.TELEGRAM_TOKEN }}
+            message: Successful build
