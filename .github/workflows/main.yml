@@ -62,11 +62,10 @@ jobs:
 
   build_telegram_notify:
     needs: [notify, flake8-lint, build_exe]
-    if: ${{ always() }}
+    if: ${{ (needs.notify.result == 'success' || needs.flake8-lint.result == 'success' || needs.build_exe.result == 'success')
     runs-on: ubuntu-latest
     steps:
       - name: Success
-        if: ${{ (needs.notify.result == 'success' && needs.flake8-lint.result == 'success' && needs.build_exe.result == 'success')
         uses: appleboy/telegram-action@master
         with:
             to: ${{ secrets.TELEGRAM_TO }}
